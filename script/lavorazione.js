@@ -1,4 +1,4 @@
-const API_KEY = "https://striveschool-api.herokuapp.com/api/product/"
+const API_KEY = "https://striveschool-api.herokuapp.com/api/product"
 const gameId = '123'
 
 fetch(`${API_KEY}/${gameId}`)
@@ -13,7 +13,7 @@ fetch(`${API_KEY}/${gameId}`)
     const col = document.getElementById('card-container')
     col.innerHTML = `
       <div class="card">
-          <img src="https://www.adobe.com/creativecloud/photography/discover/media_15955bf89f635a586d897b5c35f7a447b495f6ed7.jpeg?width=1200&format=pjpg&optimize=medium" class="card-img-top" alt="foto">
+          <img src="./pinguin.png" class="card-img-top" alt="foto">
           <div class="card-body">
               <h5 class="card-title">${One.name}</h5>
               <p class="card-text">${One.description}</p>

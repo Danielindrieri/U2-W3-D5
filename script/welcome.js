@@ -39,3 +39,5 @@ fetch(API_KEY, {
   .catch((error) => {
     console.log('ERROR', error)
   })
+//Ciao Stefano ho provato ma ad una certa mi da un errore e non riesco a capire come corregerlo, ho preso spunto da quello che abbiamo fatto ieri.
+//ma non riesco a venirne a capo, puoi gentilmente darmi una review velocissima su cosa non funziona e come potevo risolverlo,grazie e cerca di guarire

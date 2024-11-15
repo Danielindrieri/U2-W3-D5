@@ -8,7 +8,7 @@ class Game {
   }
 }
 
-const API_KEY = "https://striveschool-api.herokuapp.com/api/product/";
+const API_KEY = "https://striveschool-api.herokuapp.com/api/product";
 
 fetch(API_KEY, {
   headers: {
@@ -53,11 +53,12 @@ form.addEventListener('submit', (e) => {
 
   fetch(API_KEY, {
     method: 'POST',
+    body: JSON.stringify(newGame),
     headers: {
       'Content-Type': 'application/json',
       "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzM3MzQ5ZGFlZGU3ODAwMTU3OTM0ZjIiLCJpYXQiOjE3MzE2NzExOTcsImV4cCI6MTczMjg4MDc5N30.R1dA9-mZmzSbj1L3VoQqa4bOw_bz9HlN9RbKTXNUI_c"
     },
-    body: JSON.stringify(newGame),
+   
   })
     .then((response) => {
       if (response.ok) {
