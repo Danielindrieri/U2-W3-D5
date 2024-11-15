@@ -13,13 +13,13 @@ fetch(`${API_KEY}/${gameId}`)
     const col = document.getElementById('card-container')
     col.innerHTML = `
       <div class="card">
-          <img src="./pinguin.png" class="card-img-top" alt="foto">
+          <img src="https://images.pexels.com/photos/18688773/pexels-photo-18688773/free-photo-of-presents-by-christmas-tree.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top w-100 h-100" alt="foto" >
           <div class="card-body">
               <h5 class="card-title">${One.name}</h5>
               <p class="card-text">${One.description}</p>
-              <p class="card-text">${One.console}</p>
+              <p class="card-text">${One.brand}</p>
+              <p class="card-text">${One.imageUrl}€</p>
               <p class="card-text">${One.price}€</p>
-              <p class="card-text">${One.uscita}€</p>
               <a class="btn btn-warning" href="./backoffice.html?gameId=${gameId}">MODIFICA</a>
               <button class="btn btn-danger" onclick="deleteGame('${gameId}')">ELIMINA</button>
           </div>

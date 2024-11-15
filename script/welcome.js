@@ -21,13 +21,13 @@ fetch(API_KEY, {
 
       newCol.innerHTML = `
         <div class="card">
-            <img src="" class="card-img-top" alt="...">
+            <img src="https://images.pexels.com/photos/18688773/pexels-photo-18688773/free-photo-of-presents-by-christmas-tree.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top w-100 " alt="foto" >
             <div class="card-body">
                 <h5 class="card-title">${game.name}</h5>
                 <p class="card-text">${game.description}</p>
-                <p class="card-text">${game.console}</p>
+                <p class="card-text">${game.brand}</p>
+                <p class="card-text">${game.imageUrl}€</p>
                 <p class="card-text">${game.price}€</p>
-                <p class="card-text">${game.uscita}€</p>
                 <a href="./lavorazione.html?id=${game._id}" class="btn btn-primary">Dettagli</a>
                   <a href="./lavorazione.html?gametId=${game._id} class="btn btn-primary"></a>
             </div>
@@ -39,5 +39,3 @@ fetch(API_KEY, {
   .catch((error) => {
     console.log('ERROR', error)
   })
-//Ciao Stefano ho provato ma ad una certa mi da un errore e non riesco a capire come corregerlo, ho preso spunto da quello che abbiamo fatto ieri.
-//ma non riesco a venirne a capo, puoi gentilmente darmi una review velocissima su cosa non funziona e come potevo risolverlo,grazie e cerca di guarire

@@ -1,10 +1,10 @@
 class Game {
-  constructor(_name, _description, _console, _price,_uscita) {
+  constructor(_name, _description, _brand, _imageUrl,_price) {
     this.name = _name;
     this.description = _description;
-    this.console = _console;
-    this.price = _price;
-    this.uscita= _uscita
+    this.brand = _brand;
+    this.imageUrl = _imageUrl;
+    this.price= _price
   }
 }
 
@@ -26,9 +26,9 @@ fetch(API_KEY, {
     if (One) {
       document.getElementById('name').value = One.name || '';
       document.getElementById('description').value = One.description || '';
-      document.getElementById('console').value = One.console || '';
-      document.getElementById('price').value = One.price || '';
-       document.getElementById('uscita').value = One.uscita || ''
+      document.getElementById('brand').value = One.brand || '';
+      document.getElementById('imageUrl').value = One.imageUrl || '';
+       document.getElementById('price').value = One.price || ''
     }
   })
   .catch((err) => console.log('Errore', err));
@@ -39,16 +39,16 @@ form.addEventListener('submit', (e) => {
 
   const nameInput = document.getElementById('name');
   const descriptionInput = document.getElementById('description');
-  const consoleInput = document.getElementById('console');
-  const priceInput = document.getElementById('price');
-  const uscitaInput = document.getElementById('uscita')
+  const brandInput = document.getElementById('brand');
+  const imageUrlInput = document.getElementById('imageUrl');
+  const priceInput = document.getElementById('price')
 
   const newGame = new Game(
     nameInput.value,
     descriptionInput.value,
-    consoleInput.value,
-    priceInput.value,
-    uscitaInput.value
+    brandInput.value,
+    imageUrlInput.value,
+    priceInput.value
   );
 
   fetch(API_KEY, {
@@ -65,9 +65,9 @@ form.addEventListener('submit', (e) => {
         alert('Gioco salvato');
         nameInput.value = '';
         descriptionInput.value = '';
-        consoleInput.value = '';
-        priceInput.value = '';
-        uscitaInput.value = ''
+        brandInput.value = '';
+        imageUrlInput.value = '';
+        priceInputInput.value = ''
       } else {
         throw new Error('Errore nella creazione del gioco');
       }
